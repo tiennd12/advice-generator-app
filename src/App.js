@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
 import desktopDivider from "./images/pattern-divider-desktop.svg";
+import mobileDivider from "./images/pattern-divider-mobile.svg";
 import iconDice from "./images/icon-dice.svg";
 
 function App() {
@@ -37,11 +38,11 @@ function App() {
                 <div className="advice-quote">{`"${adviceQuote}"`}</div>
               </div>
             </div>
-            <div className="divider">
-              <img src="" alt="" />
-            </div>
             <div className="desktopDivider">
               <img src={desktopDivider} alt="" />
+            </div>
+            <div className="mobileDivider">
+              <img src={mobileDivider} alt="" />
             </div>
             <button onClick={fetchAdvice}>
               <img src={iconDice} alt="" />

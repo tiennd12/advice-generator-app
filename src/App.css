@@ -46,6 +46,10 @@
     height: 160px;
 }
 
+.mobileDivider {
+    display: none;
+}
+
 button {
     background-color: hsl(150, 100%, 66%);
     height: 60px;
@@ -53,7 +57,7 @@ button {
     line-height: 75px;
     border-radius: 50%;
     border: none;
-    margin-top: 25px;
+    margin-top: 45px;
 }
 
 button:hover {
@@ -65,4 +69,23 @@ button:hover {
 button:hover::before {
     transform: scale(1.1);
     box-shadow: 0 0 15px hsl(150, 100%, 66%);
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        /* display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center; */
+        background-color: hsl(217, 19%, 24%);
+        border-radius: 20px;
+        width: 90%;
+        height: 300px;
+    }
+    .desktopDivider {
+        display: none;
+    }
+    .mobileDivider {
+        display: block;
+    }
 }
