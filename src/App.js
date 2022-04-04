@@ -30,28 +30,29 @@ function App() {
   return (
     <div className="App">
       <div className="container">
+        {" "}
         {advice ? (
           <>
-            <div className="advice-wrap">
-              <div className="advice-number">{`ADVICE #${adviceNumber}`} </div>
-              <div className="quote-wrap">
-                <div className="advice-quote">{`"${adviceQuote}"`}</div>
-              </div>
-            </div>
+            <div className="advice-number"> {`ADVICE #${adviceNumber}`} </div>{" "}
+            <div className="quote-wrap">
+              <div className="advice-quote"> {`"${adviceQuote}"`} </div>{" "}
+            </div>{" "}
             <div className="desktopDivider">
-              <img src={desktopDivider} alt="" />
-            </div>
+              <img className="desktop-img" src={desktopDivider} alt="" />
+            </div>{" "}
             <div className="mobileDivider">
               <img src={mobileDivider} alt="" />
             </div>
-            <button onClick={fetchAdvice}>
-              <img src={iconDice} alt="" />
-            </button>
           </>
         ) : (
-          <div>Loading...</div>
-        )}
-      </div>
+          <div> Loading... </div>
+        )}{" "}
+      </div>{" "}
+      <div className="dice-button">
+        <button onClick={fetchAdvice}>
+          <img src={iconDice} alt="" />
+        </button>{" "}
+      </div>{" "}
     </div>
   );
 }
